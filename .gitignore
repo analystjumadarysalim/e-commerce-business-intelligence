@@ -1,0 +1,8 @@
+# Data (large files, download from source, see README)
+data/raw/
+data/processed/
+
+# Jupyter / Python clutter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
