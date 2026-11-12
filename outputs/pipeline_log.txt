@@ -1,0 +1,44 @@
+
+=== Running 01_load_combine.py ===
+Read Year 2009-2010 (525461, 9)
+Read Year 2010-2011 (541910, 9)
+Saved (1067371, 9) to ./data/processed/online_retail_combined.csv
+Finished 01_load_combine.py in 764 seconds
+
+=== Running 03_clean.py ===
+Loaded: (1067371, 9)
+Row classes: {'sale': 1003214, 'return': 17914, 'duplicate': 11812, 'non_product': 5980, 'adjustment': 3362, 'bad_price': 2566}
+Saved sales.csv and returns.csv
+Finished 03_clean.py in 62 seconds
+
+=== Running 04_reversals.py ===
+Reversed pairs: 1331
+Saved sales_adj.csv, returns_adj.csv, orders_adj.csv | orders: (39393, 6)
+Finished 04_reversals.py in 59 seconds
+
+=== Running 05_analysis.py ===
+Jan-Nov growth: 1.8 % | Oct-Dec share of revenue: 35.1 %
+Top product: 22423 | top 20% of products earn 78.2 % of revenue
+Median order: 301.22 | mean order: 487.5 | largest order: 52940.94
+Identified customers: 5851 | top 10%: 63.2 % | top 20%: 76.7 %
+05_analysis.py finished: charts 01-05 saved
+Finished 05_analysis.py in 26 seconds
+
+=== Running 06_returns_customers.py ===
+Sales: 19253781 | refunds: 365216 | refund rate: 1.9 %
+First cohort size: 951 | average month-1 retention: 21.2 %
+Customers scored: 5851 | champions: 1463 | repeat buyers: 72.3 %
+06_returns_customers.py finished: charts 06-08 saved
+Finished 06_returns_customers.py in 19 seconds
+
+=== Running 07_forecast.py ===
+Growth rates: Jan-Aug -0.5 % | Jan-Nov 1.8 % | Sep-Nov 5.4 %
+Backtest three-month error: -5.6 %
+1-8 December: 2010 = 357473 | 2011 = 415855 | ratio = 1.163
+Base-case total, Dec 2011 - Mar 2012: 2604342
+07_forecast.py finished: chart 09 saved
+Finished 07_forecast.py in 8 seconds
+
+PIPELINE COMPLETE: every check passed
+
+RESULT: PASSED in 960 seconds (full rebuild from the Excel file)
